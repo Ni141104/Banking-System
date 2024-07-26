@@ -24,7 +24,6 @@ import { signIn, signUp } from '@/lib/actions/user.actions'
 
 
 
-
 const AuthForm = ({type}:{type:string}) => {
     const [user, setUser] = useState(null)
     const [isLoading, setIsLoading] = useState(false);
@@ -87,7 +86,7 @@ const AuthForm = ({type}:{type:string}) => {
 
     <div className="flex flex-col gap-1 md:gap-2">
 
-        <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
+        <h1 className="text-24 lg:text-36 font-semibold text-gray-900 font-inter">
             {user? 'Link Account' : type==='sign-in' ? 'Sign In':'Sign Up'}
         </h1>
         <p className="text-16 font-normal text-gray-600">
@@ -111,7 +110,7 @@ const AuthForm = ({type}:{type:string}) => {
           <CustomInput control={form.control} name="firstName" label="First Name" placeholder="Enter your first name" />
           <CustomInput control={form.control} name="lastName" label="Last Name" placeholder="Enter your last name" />
           </div>
-          <CustomInput control={form.control} name="address" label="Address" placeholder="Enter your address" />
+          <CustomInput control={form.control} name="address1" label="Address" placeholder="Enter your address" />
           <CustomInput control={form.control} name="city" label="City" placeholder="ex: Pune" />
           <div className="flex gap-4">
           <CustomInput control={form.control} name="state" label="State" placeholder="ex: Gujarat" />
